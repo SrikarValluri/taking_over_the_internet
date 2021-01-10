@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 # import time
 import nltk
 from newspaper import Article
+from textblob import TextBlob
 
 
 res = requests.get('https://www.theonion.com/')
