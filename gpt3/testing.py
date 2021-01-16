@@ -5,7 +5,7 @@ from textblob import TextBlob
 import openai
 import pickle
 
-from gpt3 import GPT
+from gpt3 import GPT 
 from gpt3 import Example
 
 
