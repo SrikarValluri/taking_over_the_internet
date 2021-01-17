@@ -8,28 +8,37 @@ import pickle
 from gpt3 import GPT 
 from gpt3 import Example
 
+from noun_scraper import iterator
 
 nltk.download('brown')
 openai.api_key = "sk-bevCcAUQKr16OtmKeFgN93C0uSOGMHQH9Q50ohAs"
 
 gpt = pickle.load(open( "../models/gpt3_model.p", "rb" ))
 
-# prompt1 = '["trump", "impeachment", "capitol", "america", "funny"]'
-# prompt2 = '["game of thrones", "trump", "funny"]'
-# prompt3 = '["epic fortnite gamer", "apex legends", "ban for racism", "funny"]'
-# prompt4 = '["meme", "bruh moment", "artificial intelligence", "funny"]'
-prompt5 = '["insurrectionist", "dab on the haters", "lemons", "funny"]'
+input_data_not_funny = iterator('../data/ap_headlines_test.txt', 'funny')
+
+for example in input_data_not_funny:
+    noun_input = str(example[0])
+    output = gpt.submit_request(noun_input)
+    print(noun_input, output.choices[0].text)
+
+
+# prompt1 = '["bob ross", "billionares","endgame"]'
+# prompt2 = '["handsome", "misinformation", "little potatoes"]'
+# prompt3 = '["universal basic income ", "afraid of birds", "republicans", "funny"]'
+# prompt4 = '["democrats", "illegal truck turn", "totally", "funny"]'
+# prompt5 = '["cool", "nine", "fellonies", "funny"]'
 
 
 # output1 = gpt.submit_request(prompt1)
 # output2 = gpt.submit_request(prompt2)
 # output3 = gpt.submit_request(prompt3)
 # output4 = gpt.submit_request(prompt4)
-output5 = gpt.submit_request(prompt5)
+# output5 = gpt.submit_request(prompt5)
 
 
-# print(output1.choices[0].text)
-# print(output2.choices[0].text)
-# print(output3.choices[0].text)
-# print(output4.choices[0].text)
-print(output5.choices[0].text)
+# print(prompt1, output1.choices[0].text)
+# print(prompt2, output2.choices[0].text)
+# print(prompt3, output3.choices[0].text)
+# print(prompt4, output4.choices[0].text)
+# print(prompt5, output5.choices[0].text)
