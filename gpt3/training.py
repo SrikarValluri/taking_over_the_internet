@@ -15,7 +15,7 @@ from noun_scraper import iterator
 
 token_limit = 100
 
-gpt_model = GPT(engine='ada', temperature=0.5, max_tokens=token_limit)
+gpt_model = GPT(engine='ada', temperature=0.1, max_tokens=token_limit)
 
 
 input_data_funny  = iterator('../data/onion_headlines_1.txt', 'funny')

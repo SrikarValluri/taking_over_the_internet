@@ -23,11 +23,11 @@ for example in input_data_not_funny:
     print(noun_input, output.choices[0].text)
 
 
-# prompt1 = '["bob ross", "billionares","endgame"]'
-# prompt2 = '["handsome", "misinformation", "little potatoes"]'
-# prompt3 = '["universal basic income ", "afraid of birds", "republicans", "funny"]'
-# prompt4 = '["democrats", "illegal truck turn", "totally", "funny"]'
-# prompt5 = '["cool", "nine", "fellonies", "funny"]'
+# prompt1 = '["belting highs", "voice crack","drug", "funny"]'
+# prompt2 = '["beer", "pingpong", "cramps", "funny"]'
+# prompt3 = '["homework", "ocean", "cakes", "funny"]'
+# prompt4 = '["kids", "funny"]'
+# prompt5 = '["dorm", "ripperoni", "funny"]'
 
 
 # output1 = gpt.submit_request(prompt1)
