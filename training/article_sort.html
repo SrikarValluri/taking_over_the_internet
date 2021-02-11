@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module article_sort</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>article_sort</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/doug/Syncthing/Shared/Oregon%20State/Research/Watson/taking_over_the_internet/training/article_sort.py">/Users/doug/Syncthing/Shared/Oregon State/Research/Watson/taking_over_the_internet/training/article_sort.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="article_sort.html#HeadlineNounPair">HeadlineNounPair</a>
+</font></dt><dt><font face="helvetica, arial"><a href="article_sort.html#Ranking">Ranking</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="HeadlineNounPair">class <strong>HeadlineNounPair</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#HeadlineNounPair">HeadlineNounPair</a>(headline,&nbsp;nounlist)<br>
+&nbsp;<br>
+A&nbsp;<a href="#HeadlineNounPair">HeadlineNounPair</a>&nbsp;allows&nbsp;a&nbsp;given&nbsp;headline&nbsp;as&nbsp;a&nbsp;string&nbsp;to&nbsp;be<br>
+associated&nbsp;with&nbsp;the&nbsp;list&nbsp;of&nbsp;nouns&nbsp;extracted&nbsp;from&nbsp;it.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="HeadlineNounPair-__init__"><strong>__init__</strong></a>(self, headline, nounlist)</dt><dd><tt>set&nbsp;up&nbsp;a&nbsp;pairing&nbsp;of&nbsp;a&nbsp;headline&nbsp;with&nbsp;its&nbsp;extracted&nbsp;nouns.<br>
+&nbsp;<br>
+:param&nbsp;headline:&nbsp;The&nbsp;headline&nbsp;string<br>
+:param&nbsp;nounlist:&nbsp;The&nbsp;list&nbsp;of&nbsp;extracted&nbsp;nouns</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Ranking">class <strong>Ranking</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Ranking">Ranking</a>(satiricalHLs,&nbsp;realHLs,&nbsp;threshold)<br>
+&nbsp;<br>
+A&nbsp;<a href="#Ranking">Ranking</a>&nbsp;contains&nbsp;data&nbsp;for&nbsp;processing&nbsp;the&nbsp;relevance&nbsp;between&nbsp;<br>
+sets&nbsp;of&nbsp;article&nbsp;headlines.&nbsp;It&nbsp;can&nbsp;produce&nbsp;json&nbsp;that&nbsp;represents<br>
+the&nbsp;training&nbsp;pairs&nbsp;produced&nbsp;from&nbsp;the&nbsp;input&nbsp;headlines&nbsp;that&nbsp;are&nbsp;<br>
+above&nbsp;the&nbsp;threshold&nbsp;value&nbsp;of&nbsp;relevance&nbsp;given.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Ranking-__init__"><strong>__init__</strong></a>(self, satiricalHLs, realHLs, threshold)</dt><dd><tt>Set&nbsp;up&nbsp;a&nbsp;<a href="#Ranking">Ranking</a>.<br>
+&nbsp;<br>
+:param&nbsp;satiricalHLs:&nbsp;The&nbsp;filename&nbsp;of&nbsp;the&nbsp;satirical&nbsp;headlines&nbsp;input&nbsp;file.&nbsp;One&nbsp;headline&nbsp;per&nbsp;line&nbsp;please.<br>
+:param&nbsp;realHLs:&nbsp;The&nbsp;filename&nbsp;of&nbsp;the&nbsp;real&nbsp;headlines.&nbsp;One&nbsp;headline&nbsp;per&nbsp;line&nbsp;please.<br>
+:param&nbsp;threshold:&nbsp;An&nbsp;integer&nbsp;that&nbsp;represents&nbsp;the&nbsp;minimum&nbsp;numnber&nbsp;of&nbsp;shared&nbsp;nouns&nbsp;between&nbsp;a&nbsp;pair&nbsp;of&nbsp;headlines&nbsp;to&nbsp;be&nbsp;considered&nbsp;minimally&nbsp;relevant&nbsp;to&nbsp;each&nbsp;other.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-createHeadlineNounlistPairs"><strong>createHeadlineNounlistPairs</strong></a>(filename)</dt><dd><tt>Create&nbsp;headline-nounlist&nbsp;pairs&nbsp;from&nbsp;each&nbsp;line&nbsp;in&nbsp;a&nbsp;file,&nbsp;to&nbsp;allow&nbsp;for&nbsp;the&nbsp;<br>
+comparison&nbsp;and&nbsp;sorting&nbsp;of&nbsp;the&nbsp;headlines&nbsp;based&nbsp;on&nbsp;the&nbsp;noun-phrase&nbsp;contents.<br>
+&nbsp;<br>
+:param&nbsp;filename:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;file&nbsp;containing&nbsp;the&nbsp;headlines.&nbsp;One&nbsp;headline&nbsp;per&nbsp;line&nbsp;please.</tt></dd></dl>
+ <dl><dt><a name="-extractNouns"><strong>extractNouns</strong></a>(line)</dt><dd><tt>Uses&nbsp;TextBlob&nbsp;to&nbsp;detect&nbsp;nouns&nbsp;in&nbsp;lines,&nbsp;returning&nbsp;them&nbsp;as&nbsp;a&nbsp;list.<br>
+&nbsp;<br>
+:param&nbsp;line:&nbsp;The&nbsp;line&nbsp;to&nbsp;extract&nbsp;nouns&nbsp;from</tt></dd></dl>
+</td></tr></table>
+</body></html>
